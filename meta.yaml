@@ -1,0 +1,4 @@
+# Optional bot metadata shown on the leaderboard / bot detail page.
+name: My WC Bot
+description: A form-based starter bot that estimates goals from each team's tournament history.
+

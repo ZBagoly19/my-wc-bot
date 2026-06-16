@@ -1,0 +1,9 @@
+# Add any extra Python packages your bot needs, one per line.
+# The base image already provides a recent Python; the starter predict.py only
+# uses the standard library, so this file can stay empty.
+#
+# Examples:
+# requests
+# openai
+# pandas
+
