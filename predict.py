@@ -24,7 +24,8 @@ MIN_GOALS = 0
 MAX_GOALS = 20
 
 # Used when no historical data is available yet (e.g. opening fixtures).
-DEFAULT_GOALS = 1
+DEFAULT_GOALS_WINNER = 2
+DEFAULT_GOALS_LOSER = 1
 
 
 def _clamp(value: int) -> int:
@@ -98,7 +99,7 @@ def predict_score(match: dict) -> tuple:
 
     if not finished:
         print("No finished matches available yet; predicting a 1-1 draw.")
-        return DEFAULT_GOALS, DEFAULT_GOALS
+        return DEFAULT_GOALS_WINNER, DEFAULT_GOALS_LOSER
 
     # League-wide average goals per team per match, used for teams with no history.
     total_goals = sum(m["result_home"] + m["result_away"] for m in finished)
