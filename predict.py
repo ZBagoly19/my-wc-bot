@@ -21,7 +21,7 @@ import urllib.request
 
 # Clamp predictions to the league's allowed range.
 MIN_GOALS = 0
-MAX_GOALS = 20
+MAX_GOALS = 5
 
 # Used when no historical data is available yet (e.g. opening fixtures).
 DEFAULT_GOALS_WINNER = 2
@@ -29,7 +29,7 @@ DEFAULT_GOALS_LOSER = 1
 
 
 def _clamp(value: int) -> int:
-    """Keep a goal count within the allowed 0-20 range."""
+    """Keep a goal count within the allowed 0-5 range."""
     return max(MIN_GOALS, min(MAX_GOALS, value))
 
 

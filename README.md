@@ -21,7 +21,7 @@ my-wc-bot/
   {"home_goals": 2, "away_goals": 1}
   ```
 
-  Both values are integers in the range `0`–`20`.
+  Both values are integers in the range `0`–`5`.
 
 ## Test it locally
 
