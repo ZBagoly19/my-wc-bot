@@ -9,3 +9,6 @@ venv/
 /match/
 sample_input.json
 
+# JetBrains IDE
+.idea/
+
