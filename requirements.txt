@@ -7,3 +7,5 @@
 # openai
 # pandas
 
+# Used by the llm benchmark bot (benchmarks/llm.py) to query the company LLM proxy
+langchain-openai>=0.2,<1.0

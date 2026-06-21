@@ -44,7 +44,7 @@ JSON
 python predict.py sample_input.json
 ```
 
-(The bot falls back to a safe `1-1` if the league API is unreachable, so it works
+(The bot falls back to a safe `2-1` if the league API is unreachable, so it works
 offline too.)
 
 ## Register

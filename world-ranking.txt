@@ -1,0 +1,100 @@
+1	 Argentina
+2	 France
+3	 Spain
+4	 England
+5	 Brazil
+6	 Morocco
+7	 Netherlands
+8	 Germany
+9	 Portugal
+10	 Belgium
+11	 Mexico
+12	 Colombia
+13	 USA
+14	 Italy
+15	 Croatia
+16	 Japan
+17	 Senegal
+18	 Uruguay
+19	 Switzerland
+20	 Denmark
+21	 Austria
+22	 IR Iran
+23	 Korea Republic
+24	 Nigeria
+25	 Australia
+26	 Norway
+27	 Canada
+28	 Egypt
+29	 Algeria
+30	 Ecuador
+31	 Ivory Coast
+32	 Turkey
+33	 Ukraine
+34	 Russia
+35	 Poland
+36	 Sweden
+37	 Paraguay
+38	 Wales
+39	 Hungary
+40	 Panama
+41	 Scotland
+42	 Serbia
+43	 Congo DR
+44	 Czechia
+45	 Cameroon
+46	 Slovakia
+47	 Greece
+48	 Venezuela
+49	 Chile
+50	 Peru
+51	 Costa Rica
+52	 Romania
+53	 Mali
+54	 Uzbekistan
+55	 Republic of Ireland
+56	 Slovenia
+57	 Qatar
+58	 Tunisia
+59	 Saudi Arabia
+60	 Iraq
+61	 South Africa
+62	 Burkina Faso
+63	 Cabo Verde
+64	 Bosnia and Herzegovina
+65	 Ghana
+66	 Honduras
+67	 Albania
+68	 Jordan
+69	 United Arab Emirates
+70	 North Macedonia
+71	 Northern Ireland
+72	 Jamaica
+73	 Georgia
+74	 Iceland
+75	 Finland
+76	 Israel
+77	 Bolivia
+78	 Kosovo
+79	 Oman
+80	 Montenegro
+81	 Curaçao
+82	 Guinea
+83	 New Zealand
+84	 Syria
+85	 Gabon
+86	 Bulgaria
+87	 Haiti
+88	 Angola
+89	 Uganda
+90	 Zambia
+91	 China PR
+92	 Bahrain
+93	 Benin
+94	 Thailand
+95	 Palestine
+96	 Belarus
+97	 Guatemala
+98	 Luxembourg
+99	 Vietnam
+100	 El Salvador
