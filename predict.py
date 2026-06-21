@@ -36,7 +36,7 @@ logging.basicConfig(
 log = logging.getLogger("zoli-bot")
 
 # gpt model served by the Azure-style company LLM proxy.
-MODEL = "gpt-5.4-mini"
+MODEL = "gpt-5.4"
 API_VERSION = "2025-04-01-preview"
 
 
