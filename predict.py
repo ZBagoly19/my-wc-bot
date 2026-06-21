@@ -127,6 +127,21 @@ def _build_prompt(match: dict) -> str:
     stage = match.get("stage", "group")
     ranking = _load_world_ranking()
     ranking_block = f"{ranking}\n" if ranking else ""
+
+    # Results already played within this fixture's group, so the model can weigh
+    # current group standings/form, not just the static world ranking.
+    api_url = match.get("api_url")
+    group_results = ""
+    if api_url:
+        group_matches = _get_group_matches(api_url, home, away)
+        group_results = _format_group_results(group_matches)
+    group_block = (
+        "Here are the results already played in this group so far:\n"
+        f"{group_results}\n"
+        if group_results
+        else ""
+    )
+
     return (
         "You are a football pundit predicting a World Cup match.\n"
         f"Fixture ({stage} stage): {home} (home) vs {away} (away).\n"
@@ -139,6 +154,7 @@ def _build_prompt(match: dict) -> str:
         "If two or more teams have the same amount of points, their head-to-head record counts.\n"
         "For more information, here is the current world-ranking (rank and team):\n"
         f"{ranking_block}"
+        f"{group_block}"
         'Reply with ONLY a JSON object of this exact form: '
         '{"home_goals": <int>, "away_goals": <int>}'
     )
@@ -198,6 +214,27 @@ def _get_group_matches(api_url: str, home: str, away: str) -> list:
         if m.get("home_team") in group_teams and m.get("away_team") in group_teams:
             group_matches.append(m)
     return group_matches
+
+
+def _format_group_results(group_matches: list) -> str:
+    """Render the group matches as readable scorelines for the prompt.
+
+    Produces one line per played match, e.g. ``Spain 1-0 Mexico``.
+    Result-less fixtures are skipped. Returns an empty string if none are
+    finished yet, so the caller can omit the section entirely.
+    """
+    lines = []
+    for m in group_matches:
+        if m.get("status") != "finished":
+            lines.append(
+                f"{m.get('home_team')} {m.get('away_team')} - Yet to be played."
+            )
+        if m.get("result_home") is None or m.get("result_away") is None:
+            continue
+        lines.append(
+            f"{m.get('home_team')} {m['result_home']}-{m['result_away']} {m.get('away_team')}"
+        )
+    return "\n".join(lines)
 
 
 def _team_form(finished: list) -> dict:
