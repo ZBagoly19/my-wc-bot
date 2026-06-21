@@ -152,8 +152,7 @@ def _build_prompt(match: dict) -> str:
         "There are groups of 4. It is safe to say, that teams aim for the top 2 spots in their group.\n"
         "Win: 3 points, draw: 1 point.\n"
         "If two or more teams have the same amount of points, their head-to-head record counts.\n"
-        "For more information, here is the current world-ranking (rank and team):\n"
-        f"{ranking_block}"
+        "For more information, here are the games of the group:\n"
         f"{group_block}"
         'Reply with ONLY a JSON object of this exact form: '
         '{"home_goals": <int>, "away_goals": <int>}'
